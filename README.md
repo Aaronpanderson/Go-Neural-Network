@@ -33,13 +33,19 @@ Then it can be run by supplying four required command line arguments as well as 
 ```
 
 The description of each agrument is as follows:
+
 activation:
     sigmoid - Uses sigmoid activation function in training the neural network.
     relu - Uses ReLU activation function in training the neural network.
+    
 nodes: Number of nodes in the dense hidden layer of the neural network
+
 epochs: Number of epochs to train the neural network
+
 rate: Learning rate used in training the neural network
+
 -p: Optional parallel flag to run the program in parallel
+
 threads: the number of threads to spawn when run in parallel. GOMAXPROCS will be set to this value.
 
 For example running the program sequentially with the sigmoid activation function, 10 nodes in the hidden layer, for 1000 epochs and a learning rate of 0.01:
