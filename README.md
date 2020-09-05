@@ -1,6 +1,6 @@
-# Project 3
+# Neural Network in Go
 
-Submission for project 3 by Aaron Anderson.
+Neural Network implementation in Go
 
 ## Installation
 
@@ -47,23 +47,3 @@ For example running the program sequentially with the sigmoid activation functio
 ```
 ./classify sigmoid 10 1000 0.01
 ```
-
-The test data can be found in the data directory. There are three command .txt files (small.txt, medium.txt, and large.txt) that can be sent into the program via file redirection. First copy all files in the data directory to the classify directory and then run from the command line:
-
-```
-./classify activation nodes epochs rate -p threads < commandfile.txt
-```
-
-In order to time the running of the program the unix time command is used with the -p flag:
-
-```
-(time -p ./classify activation nodes epochs rate -p threads) < commandfile.txt
-```
-
-For example to time the running of classify.go with the above parameters in parallel with N=4 threads on the medium data set:
-
-```
-(time -p ./classify sigmoid 10 1000 0.01 -p 4) < medium.txt
-```
-
-The time will be output to console, and the classifications for the prediction commands will be saved to an output .csv file. 
